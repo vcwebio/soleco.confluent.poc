@@ -1,7 +1,7 @@
 - type: http
   id: external_schema_registry_endpoint
   name: Schema Registry External
-  hosts: ["http://${CONTECO_HOSTNAME}/confluent_poc/schema_registry/rest"]
+  hosts: ["http:///confluent_poc/schema_registry/rest"]
   check.response.status: [301]
   schedule: '@every 30s'
   fields:
