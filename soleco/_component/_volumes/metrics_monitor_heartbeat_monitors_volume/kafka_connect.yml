@@ -1,7 +1,7 @@
 - type: http
   id: external_kafka_connect_endpoint
   name: Kafka Connect External
-  hosts: ["http://:"]
+  hosts: ["http://${CONTECO_HOSTNAME}:"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
@@ -17,7 +17,7 @@
 - type: http
   id: internal_kafka_connect_endpoint
   name: Kafka Connect Internal
-  hosts: ["http://confluent_poc_kafka_rest_kafka_rest:8083"]
+  hosts: ["http://module_confluent_poc_kafka_rest_kafka_rest:8083"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:

@@ -1,7 +1,7 @@
 - type: http
   id: external_ksql_ksql_server_endpoint
   name: KSQL Server External
-  hosts: ["http://:8088"]
+  hosts: ["http://${CONTECO_HOSTNAME}:8088"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
@@ -17,7 +17,7 @@
 - type: http
   id: internal_ksql_ksql_server_endpoint
   name: KSQL Server Internal
-  hosts: ["http://confluent_poc_ksql_ksql_server:8088"]
+  hosts: ["http://module_confluent_poc_ksql_ksql_server:8088"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:

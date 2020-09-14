@@ -39,12 +39,19 @@
 	
 	executionplane --silent docker volume create confluent_poc_processor_streamsets_volume
 	
-executionplane --silent docker run -v confluent_poc_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco//_component/_volumes/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
+executionplane --silent docker run -v confluent_poc_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco/_component/_volumes/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
 		
 #!/usr/bin/env bash
 
 
-	executionplane --silent docker volume create confluent_poc_api_rest_kafka_connect_rest_kafka_connect_data_volume
+	executionplane --silent docker volume create confluent_poc_rest_kafka_connect_rest_kafka_connect_data_volume
 	
-executionplane --silent docker run -v confluent_poc_api_rest_kafka_connect_rest_kafka_connect_data_volume:/conteco/pwd ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco/api/_component/_volumes/rest_kafka_connect_rest_kafka_connect_data_volume/* /conteco/pwd
+executionplane --silent docker run -v confluent_poc_rest_kafka_connect_rest_kafka_connect_data_volume:/conteco/pwd ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco/connect/_component/_volumes/rest_kafka_connect_rest_kafka_connect_data_volume/* /conteco/pwd
+		
+#!/usr/bin/env bash
+
+
+	executionplane --silent docker volume create confluent_poc_rest_elasticsearch_rest_elasticsearch_data_volume
+	
+executionplane --silent docker run -v confluent_poc_rest_elasticsearch_rest_elasticsearch_data_volume:/conteco/pwd ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco/elastic/_component/_volumes/rest_elasticsearch_rest_elasticsearch_data_volume/* /conteco/pwd
 		

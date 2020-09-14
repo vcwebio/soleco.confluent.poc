@@ -1,7 +1,7 @@
 - type: http
   id: external_kafka_rest_endpoint
   name: Kafka REST External
-  hosts: ["http://:8088"]
+  hosts: ["http://${CONTECO_HOSTNAME}:8088"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
@@ -17,7 +17,7 @@
 #- type: http
 #  id: internal_kafka_rest_endpoint
 #  name: Kafka REST Internal
-#  hosts: ["http://confluent_poc_kafka_rest_kafka_rest:8082"]
+#  hosts: ["http://module_confluent_poc_kafka_rest_kafka_rest:8082"]
 #  check.response.status: [200]
 #  schedule: '@every 30s'
 #  fields:

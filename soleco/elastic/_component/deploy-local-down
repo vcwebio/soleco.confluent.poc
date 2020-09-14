@@ -7,8 +7,8 @@ executionplane --silent docker container prune --force
 continue="true"
 while [[ "true" == "$continue" ]] ;
 do
-	executionplane docker volume rm "confluent_poc_api_rest_kafka_connect_rest_kafka_connect_data_volume"
-	result=$(docker volume ls | grep "confluent_poc_api_rest_kafka_connect_rest_kafka_connect_data_volume")
+	executionplane docker volume rm "confluent_poc_rest_elasticsearch_rest_elasticsearch_data_volume"
+	result=$(docker volume ls | grep "confluent_poc_rest_elasticsearch_rest_elasticsearch_data_volume")
 	if [[ "$result" == "" ]] ; then
 		continue="false"
 	else

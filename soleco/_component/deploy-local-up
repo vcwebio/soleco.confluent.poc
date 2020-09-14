@@ -31,5 +31,5 @@
 	
 	executionplane --silent docker volume create confluent_poc_processor_streamsets_volume
 	
-executionplane --silent docker run -v confluent_poc_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco//_component/_volumes/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
+executionplane --silent docker run -v confluent_poc_metrics_monitor_heartbeat_monitors_volume:/usr/share/heartbeat/monitors.d ${CONTECO_REGISTRY}$1 --interactive cp -r /soleco/_component/_volumes/metrics_monitor_heartbeat_monitors_volume/* /usr/share/heartbeat/monitors.d
 		

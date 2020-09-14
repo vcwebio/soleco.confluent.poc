@@ -1,7 +1,7 @@
 - type: http
   id: external_confluent_control_center_endpoint
   name: Confluent Control Center External
-  hosts: ["http://:"]
+  hosts: ["http://${CONTECO_HOSTNAME}:"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
@@ -17,7 +17,7 @@
 - type: http
   id: internal_confluent_control_center_endpoint
   name: Confluent Control Center Internal
-  hosts: ["http://confluent_poc_confluent_control_center:9021"]
+  hosts: ["http://module_confluent_poc_confluent_control_center:9021"]
   check.response.status: [200]
   schedule: '@every 30s'
   fields:
